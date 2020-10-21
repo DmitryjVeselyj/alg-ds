@@ -1,22 +1,23 @@
 #ifndef __MEMALLOCATOR_H__E71A34CB
 #define __MEMALLOCATOR_H__E71A34CB
-
+#pragma once
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+
 // Init memory system with memory block pMemory.
-int meminit(void *pMemory, int size);
+int meminit(void* pMemory, int size);
 
 // You can implement memory leak checks here
 void memdone();
 
 // Allocate memory block of size 'size'.
 // Returns pointer to memory block is success, 0 otherwise
-void *memalloc(int size);
+void* memalloc(int size);
 
 // Free memory previously allocated by memalloc
-void memfree(void *p);
+void memfree(void* p);
 
 // Return minimum size in bytes of the memory pool to allocate 0-bytes block
 // use case:
